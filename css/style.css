@@ -139,5 +139,57 @@ section.features .features-item p {
                     /*-------index content--------*/
 
 .index-content {
+    display: flex;
     background: url(../image/bg_gallery.png);
+    margin-bottom: 33px;
+    padding: 50px 80px;
 }
+
+.index-content h2 {
+    margin-bottom: 35px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 24px;
+    color: #000;
+}
+
+.index-content ul {
+    list-style: none;
+}
+
+.index-content ul p {
+    margin-bottom: 5px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    line-height: 24px;
+    color: #000;
+}
+
+.index-content ul time {
+    display: block;
+    margin-bottom: 35px;
+}
+
+.index-content-left {
+    position: relative;
+    width: 300px;
+    margin-right: 90px;
+}
+.index-content-left::after {
+    content:'';
+    display: block;
+    background-image: url(../image/lindex-ine.png);
+    position: absolute;
+    top: 20px;
+    left: 385px;
+    width: 8px;
+    height: 278px;
+}
+
+.index-content-right {
+    width: 300px;
+    margin-left: 90px;
+}
+
