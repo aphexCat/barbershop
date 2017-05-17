@@ -22,7 +22,22 @@
                <a href="#" class="login">вход</a>
            </div>
        </div>
+       
     </header>
+    <section class="popup">
+           <h2>личный кабинет</h2>
+           <p>введите пожалуйста свой логин и пароль</p>
+           <form action="#" method="post">
+               <input type="text" name="name-login" placeholder="ЛОГИН">
+               <input type="password" name="password-login" placeholder="ПАРОЛЬ" placeholder="строка">
+               <div class="remember-block">
+                   <input type="checkbox" name="remember-me" id="remember">
+                   <label for="remember">запомнить меня</label>
+               <a href="#">я забыл пароль</a>
+               </div>
+               <button class="btn" type="submit">войти</button>    
+           </form>
+       </section>
     <main class="container">
         <div class="index-logo">
             <img src="image/index-logo.png" alt="Барбершоп <<Бородинский>>">
@@ -71,7 +86,7 @@
                  <h2 class="index-content-title">Фотогалерея</h2>
                  <div class="gallery">
                      <figure class="gallery-content">
-                         <img src="/image/photo1.png" alt="">
+                         <img src="image/photo1.png" alt="">
                      </figure>
                      <button class="btn gallery-prev">Назад</button>
                      <button class="btn gallery-next">Вперед</button>
@@ -91,12 +106,14 @@
                     ПН — ПТ: С 10:00 ДО 22:00<br>
                     СБ — ВС: С 10:00 ДО 19:00
                 </p>
-                <a href="#" class="btn">Как проехать</a>
-                <a href="#" class="btn">Обратная связь</a>
+                <div class="btn-block">
+                    <a href="#" class="btn">Как проехать</a>
+                    <a href="#" class="btn">Обратная связь</a>
+                </div>
             </section>
             <section class="index-content-right">
                 <h2 class="index-content-title">записаться</h2>
-                <p></p>
+                <p>УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ</p>
                 <form class="appointment-form" action="https://echo.htmlacademy.ru" method="post">
                     <input type="text" name="date" placeholder="Дата"  value>
                     <input type="text" name="time" placeholder=Время  value>
@@ -110,7 +127,12 @@
     <footer class="main-footer">
         <div class="container">
             <section class="footer-contacts">
-                
+               <p>
+                   БАРБЕРШОП «БОРОДИНСКИЙ»<br>
+                   АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
+                   <span>КАК НАС НАЙТИ?</span><br>
+                   ТЕЛЕФОН: +7(495)666-02-66
+               </p>
             </section>
             <section class="footer-social">
                 <p>Давайте дружить!</p>
@@ -119,6 +141,8 @@
                 <a href="#" class="social-btn inst">ИнстаграMм</a>
             </section>
             <section class="footer-copyright">
+               <span>РАЗРАБОТАНО:</span><br>
+               <a class="btn" href="http://htmlacademy.ru">HTMLACADEMY.RU</a>
                 
             </section>
         </div>

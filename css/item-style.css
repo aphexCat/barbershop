@@ -1,0 +1,107 @@
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;               
+    /* обнуляем отступы и убираем бордюры */
+}
+input, select, button, textarea {
+	margin: 0; 	/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	outline: none;
+    border: none;
+}
+
+li {
+    list-style: none;
+}
+
+a { 
+    display: block;
+    font-family:'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform:uppercase;
+    
+}
+
+          /*-----container---*/
+.container {
+    display: flex;
+    align-items:center;
+    width: 960px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/*--------------HEADER----------------*/
+
+.header-main {
+    background: #000;
+   
+}
+
+.header-main .header-logo {
+    width: 140px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.header-main  nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-main  nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 540px;
+    box-sizing: border-box;
+    margin-right: 145px;
+}
+
+.header-main  nav ul li {
+    padding: 0 19px;
+}
+
+.header-main  nav a {
+    font-size: 16px;
+    padding: 30px 0;
+    padding-bottom: 26px;
+    color: #fff;
+}
+
+.header-main  nav li.active a {
+    border-bottom: 4px solid #fff;
+}
+
+.header-main  nav li:hover{
+    background: #242424;
+}
+
+.header-main  nav .login {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-main  nav .login a {
+    
+    padding: 30px 0;
+    padding-left: 50px;
+    padding-right: 15px;
+    
+}
+
+.header-main  nav .login::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: ;
+    left: 15px;
+    width: 18px;
+    height: 18px;
+    background: url(../image/icon-login.png)no-repeat center;
+}

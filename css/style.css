@@ -8,6 +8,7 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, 
 input, select, button, textarea {
 	margin: 0; 	/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
 	outline: none;
+    border: none;
 }
 
 a {
@@ -24,12 +25,32 @@ body {
     background: url(../image/bg.png)no-repeat;
 }
 
-            /*-----container---*/
+          /*-----container---*/
 .container {
     width: 960px;
     margin: 0 auto;
 }
 
+
+
+            /*-----form---*/
+
+input {
+    background-color: transparent;
+    width: 140px;
+    height: 40px;
+    border: 3px solid #000;
+    padding-left: 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+  
 
            /*-----header-----*/
 .header-main {
@@ -47,24 +68,40 @@ body {
 
 .header-main nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: 3%;
+    list-style: none;
+}
+
+.header-main nav li {
+    padding: 0 20px;
+}
+
+.header-main nav li:hover {
+    background: #242424;
+    
 }
 
 .header-main .user-block {
     position: relative;
-    width: 10.4%;
+    width: 11.0%;
 }
 
 .header-main .user-block a {
     padding: 30px 0;
+    padding-left: 10px;
     text-align: center;
+}
+
+.header-main .user-block a:hover {
+    background: #242424;
+    
 }
             /*Logo icon*/
 .header-main .user-block a::before {
     content: '';
     position: absolute;
-    left: 7px; 
+    left: 12px; 
     top: 32px;
     display:block;
     width: 25px;
@@ -83,7 +120,93 @@ body {
 }
 
 
+            /*--------Popup-------------*/
 
+.popup {
+    display: block;
+    position: absolute;
+    left: 680px;
+    top: 110px;
+    height: 380px;
+    width: 460px;
+    box-sizing: border-box;
+    background: url(../image/bg_gallery.png);
+    padding: 50px 70px;
+}
+
+.popup::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 5px;
+    right: -35px;
+    background: url(../image/Cross.png) no-repeat;
+}
+
+.popup h2 {
+    margin-bottom: 25px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 24px;
+    color: #000;
+    
+}
+
+.popup p {
+    padding: 0 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    line-height: 22px;
+    color: #000;
+}
+.popup input, .popup button {
+    width: 300px;
+    box-sizing: border-box;
+    
+}
+
+.popup input[type=checkbox] {
+    display: inline-block;
+    width: 15px;
+    height: 15px;  
+}
+
+.popup .remember-block {
+    display: flex;
+}
+
+.popup label {
+    width: 200px;
+    margin-right: 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    line-height: 22px;
+    color: #000;
+}
+
+.popup a {
+    width: 150px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    line-height: 22px;
+    color: #000;
+}
+
+::placeholder {
+    color: #000;
+}
             /*-----------Logo------------*/
 .index-logo {
     display: flex;
@@ -97,13 +220,13 @@ body {
 section.features {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 80px;
 }
 section.features .features-item {
     width: 31.25%;
 }
 
 section.features .features-item b {
-    
     display: block;
     padding: 0 5px;
     text-transform:uppercase;
@@ -113,6 +236,7 @@ section.features .features-item b {
     font-weight: bold;
     color: #fff;
 }
+
 section.features .features-item b::after {
     content: '';
     display: block;
@@ -140,13 +264,14 @@ section.features .features-item p {
 
 .index-content {
     display: flex;
+    justify-content: space-between;
     background: url(../image/bg_gallery.png);
-    margin-bottom: 33px;
+    margin-bottom: 13px;
+    margin-top: 30px;
     padding: 50px 80px;
 }
 
 .index-content h2 {
-    margin-bottom: 35px;
     font-family: 'PT Sans Narrow', sans-serif;
     font-size: 30px;
     text-transform: uppercase;
@@ -159,37 +284,189 @@ section.features .features-item p {
     list-style: none;
 }
 
-.index-content ul p {
+.index-content  p {
+    width: 315px;
+    margin-top: 35px;
     margin-bottom: 5px;
+    font-size: 14px;
     font-family: 'PT Sans Narrow', sans-serif;
     font-weight: bold;
+    text-transform: uppercase;
     line-height: 24px;
     color: #000;
 }
 
-.index-content ul time {
+.index-content  time {
     display: block;
     margin-bottom: 35px;
 }
 
+ .btn {
+    width: 140px;
+    height: 45px;
+    background: #000;
+    color: #fff;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+    
+}
+ a.btn {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.index-content .btn-block {
+    display: flex;
+    margin-top: 60px;
+}
+
+.index-content .btn-block .btn {
+    margin-right: 15px;
+}
+
 .index-content-left {
     position: relative;
-    width: 300px;
-    margin-right: 90px;
+    width: 350px;
+    
 }
+
 .index-content-left::after {
     content:'';
     display: block;
     background-image: url(../image/lindex-ine.png);
     position: absolute;
     top: 20px;
-    left: 385px;
+    left: 400px;
     width: 8px;
     height: 278px;
 }
 
 .index-content-right {
-    width: 300px;
-    margin-left: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: -50px;
+    width: 350px;
+    
 }
 
+.index-content-right .gallery {
+  
+}
+
+.index-content-right .gallery .btn {
+    margin-top: 55px;
+}
+
+.index-content-right .gallery .btn:first-of-type {
+    margin-right: 17px;
+    margin-left: -5px;
+}
+
+.index-content form {
+    margin-top:20px;
+}
+
+.index-content form input {
+    background-color: transparent;
+    width: 140px;
+    height: 40px;
+    border: 3px solid #000;
+    padding-left: 10px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.index-content form .btn {
+    width: 330px;
+    margin-top:30px;
+}
+
+        /*-------------footer-------------*/
+
+.main-footer {
+    background: url(../image/bg-footer.png);
+    margin-top: 60px;
+}
+
+.main-footer .container {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 35px;
+}
+
+.main-footer .footer-contacts {
+    margin-right: 95px;
+}
+.main-footer .footer-contacts p {
+    width: 315px;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 24px;
+    color: #fff;
+}
+
+.main-footer .footer-contacts p span {
+    text-decoration: underline;
+}
+
+.main-footer .footer-social {
+    margin-right: 250px;
+}
+
+.main-footer .footer-social p {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+
+.main-footer .social-btn {
+    display: inline-block;
+    margin-right: 5px;
+    width:43px;
+    height: 43px;
+    background-image: url(../image/social-sprite.png);
+    font-size: 0;
+}
+
+.main-footer .social-btn.fb {
+    background-position: 93px 0px;
+}
+
+.main-footer .social-btn.inst {
+    background-position: 43px 0px;
+}
+
+.main-footer .footer-copyright {
+   
+}
+
+.main-footer .footer-copyright span {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+
+.main-footer .footer-copyright .btn {
+    margin-top: -5px;
+}
