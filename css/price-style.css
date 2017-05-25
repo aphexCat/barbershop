@@ -1,3 +1,4 @@
+
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -24,6 +25,33 @@ a {
     text-transform:uppercase;
     color: #000;
 }
+
+
+        /*-----tipographika---*/
+h1, h2, h3, p, li, td {
+    font-size: 48px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+p, li, td {
+    font-size: 14px;
+}
+
+
+
+
+
 
           /*-----container---*/
 .container {
@@ -118,26 +146,31 @@ body {
 
 
 
-
-/*-----------------MAIN-----------------*/
-
+            /*------main------*/
 main {
-     background: url(../image/bg_gallery.png); 
-    padding: 50px 0;
+    background: url(../image/bg_gallery.png);
+    padding-top: 55px;
+    padding-bottom: 75px;
 }
 
-main > .container {
+
+
+
+/*--------------aricle-price---------*/
+
+article .container {
     display: block;
-}
-main h1.set-travel {
-    font: bold 30px PT Sans Narrow, sans-serif;
-    text-transform: uppercase;
-    margin-bottom: 25px;
+    
 }
 
+ h2.price-caption {
+    margin-bottom: 30px;
+}
+
+/*crumbs*/
 main .crumbs {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 }
 
 main .crumbs a {
@@ -163,123 +196,101 @@ main .crumbs a:not(:last-child)::after {
 }
 
 
-/*-------------GALLERY-------------*/
 
-section.gallery {
-    display: inline-block;
-    width: 460px;
-    padding: 10px;
-    margin-left: -10px;
-    margin-right: 60px;
-    font-size: 0;
-}
-
-section.gallery .box-img {
-    display: inline-block;
-    box-shadow: 0 0 15px 1px rgba(0,0,0, .2);
-}
-
-section.gallery .big-img {
-    width: 460px;
-    margin-bottom: 20px;
-} 
-
-section.gallery .small-img {
-    width: 140px;
-    margin-right: 20px;
-} 
-
-section.gallery .small-img:last-child {
-    margin-right: 0;
-}
-
-
-
-
-/*-----------DESCRIPTION-------------*/
-
-section.description {
-    display: inline-block;
-    width: 400px;
-    vertical-align: top;
-}
-
-section.description .availability {
-    display: inline-block;
-    margin-right: 170px;
-    margin-top: 30px;
-    margin-bottom: 35px;
-    font: bold 14px PT Sans Narrow, sans-serif;
-    text-transform: uppercase;
-}
-
-section.description .vendor-code {
-    display: inline-block;
-    margin-top: 30px;
-    margin-bottom: 35px;
-    font: bold 14px PT Sans Narrow, sans-serif;
-    text-transform: uppercase;
-    color: #aeaeae;
-}
-
-section.description .description-info {
-    margin-bottom: 40px;
-    font: bold 14px/24px PT Sans Narrow, sans-serif;
-    text-transform: uppercase;
-}
-
-section.description .price {
-    margin-bottom: 60px;
-}
-
-section.description .price span{
-    display: inline-block;
-    width: 110px;
-    height: 40px;
-    text-align: center;
-    vertical-align: middle;
-    background: #e5e5e5;
-    font: bold 14px/40px PT Sans Narrow, sans-serif;
-}
-
-section.description .price a{
-    display: inline-block;
-    width: 78px;
-    height: 40px;
-    margin-left: -4px;
-    text-align: center;
-    vertical-align: middle;
-    background: #000;
-    font: bold 14px/40px PT Sans Narrow, sans-serif;
-    color: #fff;
-}
-
- .kit-contents {
-}
-
- .kit-contents h2 {
-    margin-bottom: 35px;
-    font: bold 24px PT Sans Narrow, sans-serif;
-    text-transform: uppercase;
-}
-
- .kit-contents ul li {
+article h1 {
     position: relative;
-    padding-left: 18px;
-    font: bold 14px/24px PT Sans Narrow, sans-serif;
-    text-transform: uppercase;
+    margin-bottom: 60px;
+    text-align: center;
 }
 
-.kit-contents ul li::before {
+article h1::before {
     content: '';
     display: block;
     position: absolute;
-    top: 8px;
+    top: 30px;
+    width: 160px;
+    height: 2px;
+    background: #000;
+}
+
+article h1::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 160px;
+    height: 2px;
+    background: #000;
+}
+
+article h3 {
+    margin-bottom: 35px;
+}
+
+/*out-kit*/
+article .our-kit {
+    display: inline-block;
+    width: 400px;
+    margin-right: 65px;
+    margin-bottom: 40px;
+}
+
+
+ .our-kit ul li {
+    position: relative;
+    padding-left: 20px;
+     margin-bottom: 20px;
+    font: bold 14px PT Sans Narrow, sans-serif;
+    text-transform: uppercase;
+}
+
+.our-kit ul li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
     left:0;
     width: 8px;
     height: 8px;
     transform: rotate(45deg);
     background: #000;
+}
+
+
+/*price-list*/
+
+article .price-list {
+    display: inline-block;
+    width: 470px;
+    vertical-align: top;
+}
+.price-list table {
+    border-collapse: collapse;
+}
+.price-list table tr td {
+    width: 230px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.price-list table tr td:first-child {
+    width: 215px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.price-list table tr td {
+    border: 2px solid #000;
+}
+
+
+/*about*/
+article .about .words-about {
+    display: inline-block;
+    width: 385px;
+    margin-right: 80px;
+    line-height: 24px;
 }
 
 
@@ -311,8 +322,8 @@ section.description .price a{
     text-decoration: underline;
 }
 
- .footer-contacts p {
-    
+ .footer-contacts p  {
+    color: #fff;
 }
 
  .footer-social {

@@ -1,3 +1,4 @@
+
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -17,13 +18,24 @@ li {
 
 a { 
     display: block;
-    font-family:'PT Sans Narrow', sans-serif;
+    font-family:'PT Sans Narrow' , sans-serif;
     font-weight: bold;
     text-decoration: none;
     font-size: 14px;
-    text-transform:uppercase;
+   
     color: #000;
 }
+
+
+        /*-----tipographika---*/
+h1 , legend , label  {
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+}
+
+
 
           /*-----container---*/
 .container {
@@ -69,7 +81,7 @@ body {
 }
 
 .header-main   a {
-    font-size: 16px;
+    font-size: 14px;
     padding: 30px 0;
     padding-bottom: 26px;
     color: #fff;
@@ -118,26 +130,26 @@ body {
 
 
 
-
-/*-----------------MAIN-----------------*/
-
+            /*------main------*/
 main {
-     background: url(../image/bg_gallery.png); 
-    padding: 50px 0;
+    background: url(../image/bg_gallery.png);
+    padding-top: 55px;
+    padding-bottom: 75px;
 }
 
-main > .container {
+main .container {
     display: block;
 }
-main h1.set-travel {
-    font: bold 30px PT Sans Narrow, sans-serif;
-    text-transform: uppercase;
+
+main h1 {
     margin-bottom: 25px;
+    font-size: 25px;
 }
 
+/*crumbs*/
 main .crumbs {
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 55px;
 }
 
 main .crumbs a {
@@ -163,76 +175,132 @@ main .crumbs a:not(:last-child)::after {
 }
 
 
-/*-------------GALLERY-------------*/
 
-section.gallery {
+                /*-------------FORM------------*/
+.aside-form {
     display: inline-block;
-    width: 460px;
-    padding: 10px;
-    margin-left: -10px;
-    margin-right: 60px;
-    font-size: 0;
+    width: 170px;
+     margin-right: 45px;
 }
 
-section.gallery .box-img {
-    display: inline-block;
-    box-shadow: 0 0 15px 1px rgba(0,0,0, .2);
+form fieldset {
+     margin-bottom: 40px;
 }
 
-section.gallery .big-img {
-    width: 460px;
-    margin-bottom: 20px;
-} 
+form fieldset legend {
+    margin-bottom: 35px;
+    font-size: 18px;
+}
 
-section.gallery .small-img {
-    width: 140px;
-    margin-right: 20px;
-} 
+form label {
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
 
-section.gallery .small-img:last-child {
+form input {
+     display: inline-block;
+     margin-top: 20px;
+}
+
+form input[type=radio], form input[type=checkbox] {
+     display: none;
+}
+
+form label[for^=check]::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -50px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000101;
+}
+
+form input:checked + label[for^=check]::before {
+    background: url(../image/X.png)no-repeat center;
+}
+
+
+form label[for^=radio]::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -50px;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #000101;
+    border-radius: 50%;
+}
+
+form input:checked + label[for^=radio]::before {
+    background: url(../image/X.png)no-repeat center;
+}
+
+
+
+form .btn {
+    width: 110px;
+    height: 40px;
+    background: #000;
+    font: bold 13px PT Sans Narrow, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+                /*-----------CATALOG-------------*/
+.catalog {
+     display: inline-block;
+     width: 710px;
+     vertical-align: top;
+     margin-bottom: 30px;
+}
+
+.catalog-item {
+     display: inline-block;
+     width: 220px;
+     height: 285px;
+     margin-right: 20px;
+     margin-bottom: 20px;
+     background: #fff;
+     box-shadow: 0 0 15px 1px rgba(0,0,0, .2);
+}
+
+.catalog-item:nth-child(3n) {
     margin-right: 0;
 }
 
-
-
-
-/*-----------DESCRIPTION-------------*/
-
-section.description {
-    display: inline-block;
-    width: 400px;
-    vertical-align: top;
+.catalog-item-description {
+    margin-left: 15px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    color: #000;
+    line-height: 28px;
 }
 
-section.description .availability {
-    display: inline-block;
-    margin-right: 170px;
-    margin-top: 30px;
-    margin-bottom: 35px;
-    font: bold 14px PT Sans Narrow, sans-serif;
+.catalog-item-name {
+    margin-left: 15px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
     text-transform: uppercase;
+    color: #000;
+    font-size: 13px;
 }
 
-section.description .vendor-code {
-    display: inline-block;
-    margin-top: 30px;
-    margin-bottom: 35px;
-    font: bold 14px PT Sans Narrow, sans-serif;
-    text-transform: uppercase;
-    color: #aeaeae;
+.catalog-item-price {
+    margin-top: 15px;
+    margin-left: 15px; 
 }
 
-section.description .description-info {
-    margin-bottom: 40px;
-    font: bold 14px/24px PT Sans Narrow, sans-serif;
-    text-transform: uppercase;
-}
-
-section.description .price {
-    margin-bottom: 60px;
-}
-
-section.description .price span{
+.catalog-item .catalog-item-price span{
     display: inline-block;
     width: 110px;
     height: 40px;
@@ -242,7 +310,7 @@ section.description .price span{
     font: bold 14px/40px PT Sans Narrow, sans-serif;
 }
 
-section.description .price a{
+.catalog-item .catalog-item-price a{
     display: inline-block;
     width: 78px;
     height: 40px;
@@ -254,32 +322,30 @@ section.description .price a{
     color: #fff;
 }
 
- .kit-contents {
+
+
+
+            /*----------PAGINATION---------*/
+.pagination {
+    width: 200px;
+    margin-left: 220px;
 }
 
- .kit-contents h2 {
-    margin-bottom: 35px;
-    font: bold 24px PT Sans Narrow, sans-serif;
-    text-transform: uppercase;
-}
-
- .kit-contents ul li {
-    position: relative;
-    padding-left: 18px;
-    font: bold 14px/24px PT Sans Narrow, sans-serif;
-    text-transform: uppercase;
-}
-
-.kit-contents ul li::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 8px;
-    left:0;
-    width: 8px;
-    height: 8px;
-    transform: rotate(45deg);
+.pagination a {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
     background: #000;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 42px;
+    margin-right: 2px;
+}
+
+.pagination a.pag-active {
+    background: #fff;
+    color: #000;
 }
 
 
@@ -311,8 +377,8 @@ section.description .price a{
     text-decoration: underline;
 }
 
- .footer-contacts p {
-    
+ .footer-contacts p  {
+    color: #fff;
 }
 
  .footer-social {
